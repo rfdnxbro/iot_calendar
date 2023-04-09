@@ -10,10 +10,21 @@
     const context = canvas.getContext('2d');
     let isDrag = false;
 
-    function draw(x, y) {
+    function draw(event) {
       if(!isDrag) {
         return;
       }
+      let x, y;
+      if (event.touches) { // touchイベント
+        event.preventDefault(); // ページ引っ張られるのを防ぐ
+        const offset = canvas.getBoundingClientRect();
+        x = event.touches[0].pageX - offset.left;
+        y = event.touches[0].pageY - offset.top;
+      } else {
+        x = event.offsetX;
+        y = event.offsetY;
+      }
+
       context.lineTo(x, y);
       context.stroke();
     }
@@ -35,10 +46,10 @@
       canvas.addEventListener('touchend', dragEnd);
       canvas.addEventListener('touchcancel', dragEnd);
       canvas.addEventListener('mousemove', (event) => {
-        draw(event.offsetX, event.offsetY);
+        draw(event);
       });
       canvas.addEventListener('touchmove', (event) => {
-        draw(event.offsetX, event.offsetY);
+        draw(event);
       });
       canvas.setAttribute('width', wrapper.offsetWidth);
     }
