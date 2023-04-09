@@ -31,7 +31,13 @@
       canvas.addEventListener('mousedown', dragStart);
       canvas.addEventListener('mouseup', dragEnd);
       canvas.addEventListener('mouseout', dragEnd);
+      canvas.addEventListener('touchstart', dragStart);
+      canvas.addEventListener('touchend', dragEnd);
+      canvas.addEventListener('touchcancel', dragEnd);
       canvas.addEventListener('mousemove', (event) => {
+        draw(event.offsetX, event.offsetY);
+      });
+      canvas.addEventListener('touchmove', (event) => {
         draw(event.offsetX, event.offsetY);
       });
       canvas.setAttribute('width', wrapper.offsetWidth);
