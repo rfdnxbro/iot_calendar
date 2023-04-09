@@ -67,8 +67,8 @@
     font-size: 60px;
   }
   #thisMonth {
-    font-size: 60px;
-    padding: 0 80px;
+    font-size: 40px;
+    padding: 0 10px;
   }
   .center {
     text-align: center;
@@ -83,7 +83,7 @@
 
 <div class="center">
   <button on:click={prevMonth}>&lt;</button>
-  <span id="thisMonth">{currentYear}年 {currentMonth + 1}月</span>
+  <span id="thisMonth">{currentYear}年{currentMonth + 1}月</span>
   <button on:click={nextMonth}>&gt;</button>
 </div>
 
