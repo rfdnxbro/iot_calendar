@@ -2,7 +2,7 @@
   import Canvas from '$lib/Canvas.svelte';
   import { onMount } from 'svelte';
 
-  const canvasHeight = 200;
+  const canvasHeight = 300;
 
   let month;
   let day;
