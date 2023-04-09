@@ -11,7 +11,7 @@
     const weeks = [];
     for (let i = 0; i < 6; i++) {
       const days = [];
-      for (let j = 0; j < 7; j++) {
+      for (let j = 1; j < 8; j++) {
         if (i === 0 && j < firstDay || date > daysInMonth) {
           days.push('');
         } else {
@@ -55,37 +55,61 @@
     padding: 8px;
     text-align: center;
   }
+  td {
+    height: 100px;
+    vertical-align: top;
+  }
   th {
     background-color: #f2f2f2;
   }
   button {
     cursor: pointer;
+    font-size: 60px;
+  }
+  #thisMonth {
+    font-size: 60px;
+    padding: 0 80px;
+  }
+  .center {
+    text-align: center;
+  }
+  .sat {
+    color: #00f;
+  }
+  .sun {
+    color: #f00;
   }
 </style>
 
-<div>
-  <button on:click={prevMonth}>&lt; 前の月</button>
-  <span>{currentYear}年 {currentMonth + 1}月</span>
-  <button on:click={nextMonth}>次の月 &gt;</button>
+<div class="center">
+  <button on:click={prevMonth}>&lt;</button>
+  <span id="thisMonth">{currentYear}年 {currentMonth + 1}月</span>
+  <button on:click={nextMonth}>&gt;</button>
 </div>
 
 <table>
   <thead>
     <tr>
-      <th>日</th>
       <th>月</th>
       <th>火</th>
       <th>水</th>
       <th>木</th>
       <th>金</th>
-      <th>土</th>
+      <th class="sat">土</th>
+      <th class="sun">日</th>
     </tr>
   </thead>
   <tbody>
     {#each weeks as week}
       <tr>
-        {#each week as day}
-          <td>{day}</td>
+        {#each week as day, i}
+          {#if i % 7 === 5}
+            <td class="sat">{day}</td>
+          {:else if i % 7 === 6}
+            <td class="sun">{day}</td>
+          {:else}
+            <td>{day}</td>
+          {/if}
         {/each}
       </tr>
     {/each}
