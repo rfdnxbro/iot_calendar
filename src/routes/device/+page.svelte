@@ -16,7 +16,7 @@
 </div>
 <br>
 <div id="button">
-  <a href="../">○</a>
+  <a href="../">◀　　</a>
 </div>
 
 <style>
@@ -49,5 +49,11 @@ button {
 }
 #button a {
   color: #000;
+  border: 1px solid #000;
+  padding: 0;
+  margin: 0;
+}
+#button a:hover {
+  text-decoration: none;
 }
 </style>
