@@ -65,6 +65,9 @@
   button {
     cursor: pointer;
     font-size: 60px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #000;
   }
   #thisMonth {
     font-size: 40px;

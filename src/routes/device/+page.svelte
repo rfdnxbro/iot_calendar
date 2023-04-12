@@ -16,7 +16,7 @@
 </div>
 <br>
 <div id="button">
-  <a href="../">◀　　</a>
+  <a href="../">&lt;　　</a>
 </div>
 
 <style>
@@ -52,6 +52,8 @@ button {
   border: 1px solid #000;
   padding: 0;
   margin: 0;
+  background: #fff;
+  border-radius: 20px;
 }
 #button a:hover {
   text-decoration: none;

@@ -9,7 +9,7 @@
 </div>
 <br>
 <div id="button">
-  <a href="./device">　　▶</a>
+  <a href="./device">　　&gt;</a>
 </div>
 
 <style>
@@ -25,6 +25,8 @@
   border: 1px solid #000;
   padding: 0;
   margin: 0;
+  background: #fff;
+  border-radius: 20px;
 }
 #button a:hover {
   text-decoration: none;
