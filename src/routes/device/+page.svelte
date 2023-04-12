@@ -14,6 +14,10 @@
     <Canvas canvasHeight={canvasHeight2} canvasTop={0} />
   </div>
 </div>
+<br>
+<div id="button">
+  <a href="../">○</a>
+</div>
 
 <style>
 #deviceArea {
@@ -39,10 +43,11 @@ button {
   position: relative;
   background: #fff;
 }
-#relativeArea {
-  position: relative;
+#button {
+  text-align: center;
+  font-size: 90px;
 }
-table {
-  width: 100%;
+#button a {
+  color: #000;
 }
 </style>
