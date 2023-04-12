@@ -54,6 +54,7 @@
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
+    background: #fff;
   }
   td {
     width: 14%;
@@ -76,6 +77,7 @@
   }
   .center {
     text-align: center;
+    margin: 0 0 10px 0;
   }
   .sat {
     color: #00f;
