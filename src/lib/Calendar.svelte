@@ -56,6 +56,7 @@
     text-align: center;
   }
   td {
+    width: 14%;
     height: 100px;
     vertical-align: top;
   }
@@ -82,6 +83,9 @@
   .sun {
     color: #f00;
   }
+  strong {
+    font-size: 20px;
+  }
 </style>
 
 <div class="center">
@@ -107,11 +111,13 @@
       <tr>
         {#each week as day, i}
           {#if i % 7 === 5}
-            <td class="sat">{day}</td>
+            <td class="sat"><strong>{day}</strong></td>
           {:else if i % 7 === 6}
-            <td class="sun">{day}</td>
+            <td class="sun"><strong>{day}</strong></td>
+          {:else if i % 7 === 2 && day >= 1 }
+            <td><strong>{day}</strong><br>介護予防体操</td>
           {:else}
-            <td>{day}</td>
+            <td><strong>{day}</strong></td>
           {/if}
         {/each}
       </tr>
