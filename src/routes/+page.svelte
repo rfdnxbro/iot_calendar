@@ -8,6 +8,7 @@
   <Canvas canvasHeight={800} canvasTop={100} />
 </div>
 <br>
+
 <div id="button">
   <a href="./device">　　&gt;</a>
 </div>
